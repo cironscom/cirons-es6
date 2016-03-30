@@ -10,7 +10,7 @@ Some articles and information is available in the **[Links](#links)** seciton.
 
 ## Coding Standards
 
-**TOC**
+######TOC
 1. [App.js](#appjs)
 2. [Components](#components)
 3. [Service](#service)
@@ -112,7 +112,7 @@ export default angular.module('app.services', [])
   .name;
 ```
 
-### Controllers
+### Controller
 
 ```javascript
 import PageController from './page.controller.js';
