@@ -142,3 +142,4 @@ HomeController.$inject = ['users'];
 * http://angular-tips.com/blog/2015/06/using-angular-1-dot-x-with-es6-and-webpack/
 * https://github.com/preboot/angular-webpack
 * https://material.angularjs.org/latest/
+* https://babeljs.io/docs/learn-es2015/
