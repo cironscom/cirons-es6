@@ -1,7 +1,7 @@
 {
-  "name": "angular-webpack-workflow",
-  "version": "1.0.0",
-  "description": "A workflow for Angular made with Webpack",
+  "name": "Cirons ES6",
+  "version": "0.1.0",
+  "description": "Cirons Remake in ES6",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -11,14 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
+    "url": "https://github.com/cironscom/cirons-es6"
   },
-  "author": "Jesus Rodriguez",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
-  },
-  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
+  "author": "Philip Andersson",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-animate": "^1.5.3",
