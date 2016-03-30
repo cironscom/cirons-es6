@@ -1,9 +1,5 @@
 import angular from 'angular';
 
-// require('angular-aria');
-// require('angular-animate');
-// require('angular-messages');
-
 import AppController from './app.controller';
 import uirouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
