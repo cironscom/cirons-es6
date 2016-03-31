@@ -8,7 +8,7 @@
 ### ES6
 
 ###### Modules
-- [x] Login
+- [x] Login
 - [ ] Notifications
 - [ ] Calendar
 - [x] Icons
