@@ -1,0 +1,30 @@
+body.login {
+    .add-toolbar,
+    .header-toolbar,
+    .primary-menu {
+        display: none !important;
+    }
+    $login_bg: #eee;
+    background: $login_bg;
+    section {
+        background: $login_bg;
+    }
+    md-content.main-content {
+        background: $login_bg;
+    }
+    .login-screen {
+        form.login {
+            background: white;
+            width: 500px;
+            margin: 200px auto auto;
+            padding: 30px;
+            h2.md-headline {
+                margin-top: 10;
+            }
+            md-input-container {
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+        }
+    }
+}

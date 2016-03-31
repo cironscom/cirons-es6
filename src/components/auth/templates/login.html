@@ -1,0 +1,21 @@
+<div layout-align="center center" class="login-screen">
+
+    <form class="login md-whiteframe-4dp" ng-submit="auth.login()">
+
+        <h2 class="md-headline">Login</h2>
+
+        <md-input-container class="md-block">
+            <label>Username</label>
+            <input ng-model="auth.email" md-autofocus autofocus type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input type="password" ng-model="auth.password">
+        </md-input-container>
+
+        <button type="submit" class="md-block md-button md-primary md-raised">Login</button>
+
+    </form>
+
+</div>

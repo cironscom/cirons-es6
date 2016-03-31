@@ -3,6 +3,7 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
 import satellizer from 'satellizer';
+import ngCookies from 'angular-cookies';
 
 import AppController from './app.controller';
 import run from './run';
@@ -25,7 +26,7 @@ let app = () => {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [uirouter, services, components, directives, ngMaterial, satellizer])
+angular.module(MODULE_NAME, [uirouter, services, components, directives, ngMaterial, ngCookies, satellizer])
     .run(run)
     .config(routing)
     .config(theme)
