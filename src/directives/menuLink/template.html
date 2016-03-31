@@ -2,7 +2,7 @@
     <h2 ng-if="!item.children.length && !item.state" class="menu-heading md-subhead ng-binding ng-scope">
         {{item.title}}
     </h2>
-    <md-button ng-if="item.children.length" ng-click="toggle()">
+    <md-button aria-label="{{item.title}}" ng-if="item.children.length" ng-click="toggle()">
         <div flex="" layout="row" ng-if="item.children.length" class="layout-row flex">
             <span>{{item.title}}</span>
             <span flex="" class="flex"></span>
@@ -20,7 +20,7 @@
 
     <ul ng-if="item.children.length" style="height: {{toggleHeight}}px">
         <li ng-repeat="sub in item.children">
-            <md-button ng-if="sub.state" ui-sref="{{sub.state}}">
+            <md-button ng-if="sub.state" aria-label="{{sub.title}}" ui-sref="{{sub.state}}">
                 <md-icon ng-if="sub.icon">{{sub.icon}}</md-icon>
                 <span>{{sub.title}}</span>
             </md-button>

@@ -72,6 +72,9 @@ md-sidenav {
             }
             li.active {
                 background: rgb(211, 224, 246);
+                > button {
+                    background: #F5F5F5;
+                }
                 ul {
                     li {
                         background: rgba(255,255,255,0.5);
