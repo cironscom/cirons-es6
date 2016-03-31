@@ -1,6 +1,9 @@
 @import '../../node_modules/angular-material/angular-material.scss';
 @import '../components/menu/style.scss';
+
 $toolbar_height: 50px;
+$menu_width: 250px;
+
 md-fab-toolbar {
     position: absolute;
     bottom: 10px;
@@ -11,7 +14,7 @@ md-fab-toolbar {
         // width: 100%;
     }
 }
-md-toolbar {
+md-toolbar.header-toolbar {
     height: $toolbar_height;
     min-height: $toolbar_height;
 }
@@ -49,4 +52,8 @@ md-toolbar {
             color: rgba(255,255,255,0.3);
         }
     }
+}
+
+.primary-menu {
+    width: $menu_width;
 }

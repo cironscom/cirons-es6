@@ -1,7 +1,7 @@
 <div layout="column" ng-cloak style="height: 100%;">
     <section layout="row" flex>
         <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z2 primary-menu" md-component-id="menu" md-is-locked-open="$mdMedia('gt-sm')">
-            <md-toolbar>
+            <md-toolbar class="header-toolbar">
                 <div class="md-toolbar-tools">
                     <h2>
                         <span>Cirons</span>
@@ -12,7 +12,7 @@
             <main-menu></main-menu>
         </md-sidenav>
         <md-content flex>
-            <md-toolbar>
+            <md-toolbar class="header-toolbar">
                 <div class="md-toolbar-tools">
                     <md-button ng-click="app.toggleMenu()" class="md-icon-button" hide-gt-sm>
                         <md-icon>menu</md-icon>

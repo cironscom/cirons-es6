@@ -1,8 +1,11 @@
 import angular from 'angular';
 
-import AppController from './app.controller';
 import uirouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
+import satellizer from 'satellizer';
+
+import AppController from './app.controller';
+import run from './run';
 
 import theme from './theme';
 import routing from './app.config';
@@ -22,7 +25,8 @@ let app = () => {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [uirouter, services, components, directives, ngMaterial])
+angular.module(MODULE_NAME, [uirouter, services, components, directives, ngMaterial, satellizer])
+    .run(run)
     .config(routing)
     .config(theme)
     .directive('app', app)
