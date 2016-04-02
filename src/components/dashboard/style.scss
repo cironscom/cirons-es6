@@ -1,0 +1,41 @@
+$main_chart_sub_color: rgba(255,255,255,0.15);
+$main_chart_text_color: #1193FB;
+$main_chart_line_color: $main_chart_text_color;
+
+body.dashboard {
+    md-content {
+        background: #eff5f8;
+
+        .dashboard-content {
+            padding: 30px;
+            .main-chart {
+                div.c3-chart {
+                    padding: 20px;
+                }
+                background: $accent_color;
+                .c3-grid line {
+                    stroke: $main_chart_sub_color;
+                }
+                .c3 .c3-axis text tspan {
+                    stroke: $main_chart_text_color;
+                    // color: $main_chart_text_color;
+                }
+                .c3-shape.c3-shape.c3-line {
+                    stroke: $main_chart_line_color !important;
+                }
+                .c3 .c3-axis-x path,
+                .c3 .c3-axis-x line {
+                    stroke: $main_chart_sub_color;
+                }
+                .c3 .c3-axis-y path,
+                .c3 .c3-axis-y line {
+                    stroke: $main_chart_sub_color;
+                }
+                footer {
+                    background: rgb(13, 134, 230);
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

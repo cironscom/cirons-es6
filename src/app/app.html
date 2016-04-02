@@ -22,9 +22,22 @@
                         <input type="text" placeholder="Search...">
                     </md-input-container>
                     <span flex></span>
+
+                    <md-button class="md-icon-button md-primary">
+                        <md-icon md-svg-icon="bullhorn" style="color: white;" aria-label="Notifications"></md-icon>
+                    </md-button>
+
+                    <md-button class="md-icon-button md-primary">
+                        <md-icon md-svg-icon="exclamation" style="color: white;" aria-label="Warning"></md-icon>
+                    </md-button>
+
+                    <md-button class="md-icon-button md-primary">
+                        <md-icon md-svg-icon="alarm" style="color: white;" aria-label="Alarm"></md-icon>
+                    </md-button>
+
                     <md-menu md-position-mode="target-right target">
                         <md-button ng-click="$mdOpenMenu($event)">
-                            Account
+                            Philip Andersson
                             <md-icon>account_circle</md-icon>
                         </md-button>
                         <md-menu-content width="4">
@@ -44,14 +57,11 @@
                             </md-menu-item>
                         </md-menu-content>
                     </md-menu>
-                    <md-button class="md-raised md-accent">
-                        Open
-                        <md-icon>shopping_cart</md-icon>
-                    </md-button>
                 </div>
             </md-toolbar>
             <div layout="column" layout-fill layout-align="top left">
 
+                <md-subheader class="md-primary breadcrumb">Dashboard</md-subheader>
                 <ui-view></ui-view>
 
             </div>

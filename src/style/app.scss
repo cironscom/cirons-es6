@@ -1,13 +1,14 @@
 @import '../../node_modules/angular-material/angular-material.scss';
-@import '../components/menu/style.scss';
-@import './login.scss';
 @import '../../node_modules/sass-material-colors/sass/sass-material-colors';
 
 $primary_color: material-color('blue', '600');
 $accent_color: material-color('light-blue', '900');
-
 $toolbar_height: 50px;
 $menu_width: 250px;
+
+@import '../components/menu/style.scss';
+@import '../components/dashboard/style.scss';
+@import './login.scss';
 
 md-fab-toolbar {
     position: absolute;
@@ -22,6 +23,9 @@ md-fab-toolbar {
 md-toolbar.header-toolbar {
     height: $toolbar_height;
     min-height: $toolbar_height;
+}
+.breadcrumb {
+    border-bottom: 1px solid #e1e1e1;
 }
 .search-bar {
     margin: 0;
@@ -58,26 +62,9 @@ md-toolbar.header-toolbar {
         }
     }
 }
-
 .primary-menu {
     width: $menu_width;
     background: #FAFAFA;
 }
 
-.dashboard-content {
-    padding: 30px;
-
-    .chart {
-        div {
-            height: 200px;
-        }
-        background: $accent_color;
-
-        footer {
-            background: rgba(255,255,255,0.07);
-            height: 80px;
-        }
-    }
-}
-
-@import './loader.scss';
+// @import './loader.scss';
