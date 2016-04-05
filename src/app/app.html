@@ -17,7 +17,7 @@
                     <md-button ng-click="app.toggleMenu()" class="md-icon-button" hide-gt-sm>
                         <md-icon>menu</md-icon>
                     </md-button>
-                    <md-input-container class="search-bar" md-no-float>
+                    <md-input-container class="search-bar" md-no-float hide-xs>
                         <md-icon>search</md-icon>
                         <input type="text" placeholder="Search...">
                     </md-input-container>
@@ -35,10 +35,10 @@
                         <md-icon md-svg-icon="alarm" style="color: white;" aria-label="Alarm"></md-icon>
                     </md-button>
 
-                    <md-menu md-position-mode="target-right target">
+                    <md-menu md-position-mode="target-right target" hide-sm hide-xs>
                         <md-button ng-click="$mdOpenMenu($event)">
-                            Philip Andersson
                             <md-icon>account_circle</md-icon>
+                            Philip Andersson
                         </md-button>
                         <md-menu-content width="4">
                             <md-menu-item>
