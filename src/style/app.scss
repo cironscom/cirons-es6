@@ -1,16 +1,15 @@
 @import '../../node_modules/angular-material/angular-material.scss';
 @import '../../node_modules/sass-material-colors/sass/sass-material-colors';
-
 $primary_color: material-color('blue', '600');
 $accent_color: material-color('light-blue', '900');
 $toolbar_height: 50px;
 $menu_width: 250px;
-
 @import '../components/menu/style.scss';
 @import '../components/dashboard/style.scss';
 @import './login.scss';
+@import './colors.scss';
 
-md-fab-toolbar {
+.add-toolbar {
     position: absolute;
     bottom: 10px;
     right: 0;
@@ -66,5 +65,12 @@ md-toolbar.header-toolbar {
     width: $menu_width;
     background: #FAFAFA;
 }
-
+md-list-item.item-list {
+    .md-list-item-small-text {
+        display: inline-block;
+        margin-left: 3px;
+        margin-right: 29px;
+        margin-top: 16px;
+    }
+}
 // @import './loader.scss';

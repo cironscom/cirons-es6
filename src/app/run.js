@@ -9,6 +9,7 @@ export default function run($rootScope, $auth, $state, $cookies) {
 
     $rootScope.$on('$stateChangeSuccess', function(event, toState) {
         $rootScope.bodyClass = toState.name;
+        $rootScope.addButton = null;
     });
 
     $rootScope.$on('$stateChangeStart', function(event, toState) {

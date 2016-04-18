@@ -11,19 +11,61 @@ export default class MenuController {
             children: [{
                 title: 'Orders',
                 state: 'orders'
+            },{
+                title: 'Invoices',
+                state: 'invoices'
+            },{
+                title: 'Products',
+                state: 'products'
+            },{
+                title: 'Customers',
+                state: 'customers'
             }]
         },{
-            title: 'Sales',
+            title: 'Expenses',
             children: [{
-                title: 'Orders',
-                state: 'orders'
+                title: 'Receipts',
+                state: 'receipts'
+            },{
+                title: 'Supplier Invoices',
+                state: 'supplier_invoices'
+            },{
+                title: 'Suppliers',
+                state: 'suppliers'
             }]
         },{
-            title: 'Sales',
+            title: 'Stock',
             children: [{
-                title: 'Orders',
-                state: 'orders'
+                title: 'Warehouses',
+                state: 'warehouses'
+            },{
+                title: 'Products',
+                state: 'products'
             }]
+        },{
+            title: 'Purchasing',
+            children: [{
+                title: 'Purchase Orders',
+                state: 'po'
+            }]
+        },{
+            title: 'HR',
+            children: [{
+                title: 'Employees',
+                state: 'employees'
+            }]
+        },{
+            title: 'Accounting',
+            children: [{
+                title: 'Verifications',
+                state: 'verifications'
+            },{
+                title: 'VAT',
+                state: 'vat'
+            }]
+        },{
+            title: 'System Admin',
+            state: 'system_admin'
         }];
     }
 }

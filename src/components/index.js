@@ -7,10 +7,13 @@ import dashboard from './dashboard';
 import menu from './menu';
 import auth from './auth';
 
+import invoices from './invoices';
+
 export default angular.module('app.components', [
     generics,
     users,
     dashboard,
     menu,
-    auth
+    auth,
+    invoices
 ]).name;
