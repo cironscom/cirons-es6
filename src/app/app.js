@@ -5,6 +5,7 @@ import ngMaterial from 'angular-material';
 import satellizer from 'satellizer';
 import ngCookies from 'angular-cookies';
 import ngAria from 'angular-aria';
+import ngAnimate from 'angular-animate';
 
 window.d3 = require('d3');
 window.c3 = require('c3');
@@ -32,7 +33,7 @@ let app = () => {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [uirouter, services, components, directives, ngMaterial, ngCookies, satellizer, ngAria, 'gridshore.c3js.chart'])
+angular.module(MODULE_NAME, [uirouter, services, components, directives, ngMaterial, ngCookies, satellizer, ngAria, ngAnimate, 'gridshore.c3js.chart'])
     .run(run)
     .config(routing)
     .config(theme)

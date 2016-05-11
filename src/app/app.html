@@ -1,7 +1,7 @@
 <div layout="column" ng-cloak style="height: 100%;">
     <section layout="row" flex>
         <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z2 primary-menu" md-component-id="menu" md-is-locked-open="$mdMedia('gt-sm')">
-            <md-toolbar class="header-toolbar">
+            <md-toolbar class="header-toolbar md-whiteframe-3dp">
                 <div class="md-toolbar-tools">
                     <h2>
                         <span>Cirons 2016</span>
@@ -12,7 +12,7 @@
             <main-menu></main-menu>
         </md-sidenav>
         <md-content class="main-content" flex>
-            <md-toolbar class="header-toolbar">
+            <md-toolbar class="header-toolbar md-whiteframe-3dp">
                 <div class="md-toolbar-tools">
                     <md-button ng-click="app.toggleMenu()" class="md-icon-button" hide-gt-sm>
                         <md-icon>menu</md-icon>
@@ -66,36 +66,11 @@
                     </md-menu>
                 </div>
             </md-toolbar>
-            <div layout="column" layout-fill layout-align="top left">
-
-                <md-subheader class="md-primary breadcrumb">Dashboard</md-subheader>
-                <ui-view></ui-view>
-
+            <div layout="column" class="content" layout-fill layout-align="top left">
+                <div ui-view></div>
             </div>
             <div flex></div>
         </md-content>
-        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="cart">
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <h2>
-                        <span>
-                            <md-icon>shopping_cart</md-icon>
-                            Open Another
-                        </span>
-                    </h2>
-                    <span flex></span>
-                    <md-button aria-label="Checkout" class="md-accent md-raised">
-                        Hey
-                        <md-icon>credit_card</md-icon>
-                    </md-button>
-                </div>
-            </md-toolbar>
-            <md-content layout-padding>
-
-                <!-- <ng-include src="'./components/cart/cart.mini.view.html'"></ng-include> -->
-
-            </md-content>
-        </md-sidenav>
     </section>
 </div>
 <add-toolbar></add-toolbar>

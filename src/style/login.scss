@@ -1,7 +1,8 @@
 body.login {
     .add-toolbar,
     .header-toolbar,
-    .primary-menu {
+    .primary-menu,
+    .breadcrumb {
         display: none !important;
     }
     $login_bg: #eee;

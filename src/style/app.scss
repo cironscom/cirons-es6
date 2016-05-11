@@ -3,12 +3,10 @@
 $primary_color: material-color('blue', '600');
 $accent_color: material-color('light-blue', '900');
 $toolbar_height: 50px;
-$menu_width: 250px;
-@import '../components/menu/style.scss';
+@import './menu.scss';
 @import '../components/dashboard/style.scss';
 @import './login.scss';
 @import './colors.scss';
-
 .add-toolbar {
     position: absolute;
     bottom: 10px;
@@ -17,6 +15,11 @@ $menu_width: 250px;
     transition: width 200ms ease;
     &.md-is-open {
         // width: 100%;
+    }
+}
+md-tabs {
+    md-tabs-wrapper {
+        background-color: white;
     }
 }
 md-toolbar.header-toolbar {
@@ -61,10 +64,6 @@ md-toolbar.header-toolbar {
         }
     }
 }
-.primary-menu {
-    width: $menu_width;
-    background: #FAFAFA;
-}
 md-list-item.item-list {
     .md-list-item-small-text {
         display: inline-block;
@@ -73,4 +72,124 @@ md-list-item.item-list {
         margin-top: 16px;
     }
 }
+.header {
+    height: 160px;
+    min-height: 160px;
+    max-height: 160px;
+    padding: 24px;
+    background-image: url("/img/backgrounds/header-bg.png");
+    background-size: cover;
+    background-color: $accent_color;
+    h1 {
+        color: white;
+        font-size: 32px;
+        font-family: Roboto;
+        font-weight: 300;
+    }
+}
 // @import './loader.scss';
+//
+// @mixin transition() {
+//     -webkit-backface-visibility: hidden;
+//     -webkit-perspective: 1000px;
+// }
+//
+// @mixin easingOutQuadTimingTransition($duration) {
+//     @include transition();
+//     transition-property: none;
+//     transition-duration: $duration;
+//     transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+// }
+//
+// // Slide Up
+// .animate-slide-up {
+//     @include transition();
+//     transition: all 300ms ease;
+//     opacity: 1;
+//
+//     // Enter & Leave
+//     &.ng-enter {
+//         opacity: 0;
+//
+//         &.ng-enter-active {
+//             transition-property: all;
+//             transform: translateY(0);
+//             opacity: 1;
+//         }
+//     }
+//
+//     &.ng-leave {
+//         transform: translateY(0);
+//         opacity: 1;
+//
+//         &.ng-leave-active {
+//             transition-property: all;
+//             opacity: 0;
+//         }
+//     }
+//
+//     // Hide
+//     &.ng-hide {
+//         opacity: 0;
+//     }
+//
+//     &.ng-hide-add-active,
+//     &.ng-hide-remove-active {
+//         transition-property: all;
+//     }
+// }
+
+.main-content {
+    display: flex !important;
+    flex-direction: column;
+
+    .header-toolbar {
+        flex: 0 0 auto;
+    }
+
+    .content {
+        flex: 1 1 auto;
+        overflow: hidden;
+        height: auto !important;
+        max-height: none !important;
+        min-height: 0 !important;
+    }
+
+}
+
+[ui-view] {
+    height: 100%;
+}
+
+.carded {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    header.header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .inner {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        position: absolute;
+        overflow: hidden;
+        md-sidenav {
+            position: static;
+            z-index: 2;
+            width: 220px;
+            min-width: 220px;
+            max-width: 220px;
+            display: flex;
+        }
+    }
+}

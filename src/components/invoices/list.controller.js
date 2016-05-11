@@ -8,13 +8,10 @@ export default class InvoiceListController extends Controller {
             state: 'invoices.create'
         };
 
-        console.info(Invoice);
-
         this.invoices = [];
-        Invoice.list().then((invoices) => {
-            this.invoices = invoices;
-
-        });
+        // Invoice.list().then((invoices) => {
+        //     this.invoices = invoices;
+        // });
 
     }
 }
