@@ -4,7 +4,7 @@ $menu_bg: #2D323E;
 $menu_active_bg: rgba(255,255,255, 0.1);
 $menu_sub_bg: rgba(0,0,0,0.2);
 $menu_width: 250px;
-md-sidenav {
+md-sidenav.primary-menu {
     background: $menu_bg;
     width: $menu_width;
     .menu-heading {
