@@ -1,3 +1,12 @@
+const getMonthName = function(){
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    let d = new Date();
+
+    return monthNames[d.getMonth()].toLowerCase();
+}
+
 export default function run($rootScope, $auth, $state, $cookies) {
 
     // is user authenticated?
@@ -25,6 +34,8 @@ export default function run($rootScope, $auth, $state, $cookies) {
         $cookies.remove('token');
         window.location.reload();
     };
+
+    $rootScope.monthName = getMonthName();
 
 }
 run.$inject = ['$rootScope', '$auth', '$state', '$cookies'];

@@ -1,12 +1,13 @@
 body.login {
+    $login_bg: transparent;
+    background-position: center center;
+
     .add-toolbar,
     .header-toolbar,
     .primary-menu,
     .breadcrumb {
         display: none !important;
     }
-    $login_bg: #eee;
-    background: $login_bg;
     section {
         background: $login_bg;
     }
