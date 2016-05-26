@@ -1,6 +1,6 @@
 export default class AuthController {
 
-    constructor($auth, $http, $cookies, $state) {
+    constructor($auth, $http, $cookies, $state, $rootScope) {
 
         this.email = '';
         this.password = '';
@@ -9,6 +9,8 @@ export default class AuthController {
         this.$auth = $auth;
         this.$http = $http;
         this.$cookies = $cookies;
+
+        $rootScope.bodyClass += " " + $rootScope.monthName;
 
     }
 
@@ -31,4 +33,4 @@ export default class AuthController {
     }
 
 }
-AuthController.$inject = ['$auth', '$http', '$cookies', '$state'];
+AuthController.$inject = ['$auth', '$http', '$cookies', '$state', '$rootScope'];
