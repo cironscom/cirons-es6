@@ -1,0 +1,55 @@
+<div class="carded">
+    <header class="header"></header>
+    <div class="inner">
+        <md-sidenav md-is-locked-open="$mdMedia('gt-md')" md-component-id="main-sidenav">
+            <header>
+                <h1>{{title || plural}}</h1>
+            </header>
+            <aside>
+
+                <md-button class="item">
+                    <md-icon md-svg-icon="view-headline"></md-icon>
+                    <span>All {{plural}}</span>
+                </md-button>
+
+                <h3>Filters</h3>
+                <md-button class="item">
+                    <md-icon md-svg-icon="checkbox-blank-circle"></md-icon>
+                    <span>Unpaid</span>
+                </md-button>
+
+            </aside>
+        </md-sidenav>
+
+        <div class="content-col">
+            <header>
+
+                <div class="search-bar md-whiteframe-3dp">
+                    <md-icon md-svg-icon="magnify"></md-icon>
+                    <input type="text" placeholder="Search {{plural}}...">
+                </div>
+
+            </header>
+            <div class="content-card md-whiteframe-3dp">
+
+            </div>
+        </div>
+
+        <!-- <md-list-item class="noright md-2-line item-list" ng-repeat="invoice in list.invoices">
+            <md-checkbox ng-model="message.selected"></md-checkbox>
+
+            <div class="md-list-item-text">
+                <h3>
+                    <md-icon md-svg-icon="checkbox-blank-circle" class="step-color" ng-class="invoice.step"></md-icon>
+                    {{invoice.contact.name}}
+                </h3>
+                <p>
+                    {{invoice.date}} <span ng-if="invoice.invoice_no != ''">(Inv No. #{{invoice.invoice_no}})</span>
+                </p>
+            </div>
+            <md-button class="md-secondary md-icon-button">
+                <md-icon class="md-secondary">add</md-icon>
+            </md-button>
+        </md-list-item> -->
+    </div>
+</div>
