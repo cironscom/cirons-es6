@@ -18,12 +18,12 @@
             <p>
                 <span class="list-label">
                     <span class="color step-bg {{item.step}}"></span>
-                    {{item.step}}
-                </span> {{item.date}} <span ng-if="item.item_no != ''">(Inv No. #{{item.item_no}})</span>
+                    {{$root.stepTitle.invoice[item.step]}}
+                </span> {{item.date}} <span ng-if="item.item_no != ''">(Inv No. #{{item.invoice_no}})</span>
             </p>
         </div>
         <div class="md-secondary">
-            {{item.grand_total}} {{item.currency}}
+            {{item.grand_total | number: 2}} {{item.currency}}
         </div>
     </md-list-item>
 </script>

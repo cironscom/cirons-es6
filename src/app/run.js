@@ -61,6 +61,15 @@ export default function run($rootScope, $auth, $state, $cookies) {
         }]
     };
 
+    $rootScope.stepTitle = {
+        invoice: {}
+    };
+    
+    for(let i = 0; i < $rootScope.steps.invoice.length; i++){
+        let step = $rootScope.steps.invoice[i];
+        $rootScope.stepTitle.invoice[step.id] = step.title;
+    }
+
     $rootScope.$on('$stateChangeStart', function(event, toState) {
         if (!$rootScope.loggedIn) {
             if (toState.name != 'login') {
