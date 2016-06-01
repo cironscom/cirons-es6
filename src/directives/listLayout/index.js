@@ -3,12 +3,29 @@ export default function listLayout() {
         scope: {
             'title': '@',
             'singular': '@',
-            'plural': '@'
+            'plural': '@',
+            'steps': '=',
+            'itemTemplate': '@',
+            'serviceName': '@'
         },
         template: require('./template.html'),
         replace: true,
-        controller: function($scope) {
-            
+        controller: function($scope, $injector, Invoice) {
+
+            $scope.selectedStep = null;
+            $scope.setSelectedStep = (id) => { $scope.selectedStep = id; };
+            $scope.items = [];
+
+            $scope.service = null;
+            if($scope.serviceName){
+                $scope.service = $injector.get($scope.serviceName);
+            }
+
+            if($scope.service.list){
+                $scope.service.list().then((items) => {
+                    $scope.items = items;
+                });
+            }
         }
     };
 }

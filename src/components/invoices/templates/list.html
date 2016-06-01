@@ -1,5 +1,29 @@
 <list-layout
     plural="Invoices"
     singular="Invoices"
+    steps="$root.steps.invoice"
+    service-name="Invoice"
+    item-template="invoice-list-item"
 >
 </list-layout>
+
+<script type="text/ng-template" id="invoice-list-item">
+    <md-list-item class="noright md-2-line item-list">
+        <md-checkbox ng-model="message.selected"></md-checkbox>
+
+        <div class="md-list-item-text">
+            <h3>
+                {{item.contact.name}}
+            </h3>
+            <p>
+                <span class="list-label">
+                    <span class="color step-bg {{item.step}}"></span>
+                    {{item.step}}
+                </span> {{item.date}} <span ng-if="item.item_no != ''">(Inv No. #{{item.item_no}})</span>
+            </p>
+        </div>
+        <div class="md-secondary">
+            {{item.grand_total}} {{item.currency}}
+        </div>
+    </md-list-item>
+</script>

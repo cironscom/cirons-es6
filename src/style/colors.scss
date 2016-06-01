@@ -15,3 +15,21 @@
         color: material-color('green', '300');
     }
 }
+
+.step-bg {
+    &.delivered, &.paid {
+        background-color: material-color('green', '500');
+    }
+    &.draft, &.pending {
+        background-color: material-color('blue', '500');
+    }
+    &.booked {
+        background-color: material-color('light-blue', '500');
+    }
+    &.sent {
+        background-color: material-color('orange', '500');
+    }
+    &.shipped {
+        background-color: material-color('green', '300');
+    }
+}

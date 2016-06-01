@@ -1,0 +1,15 @@
+.list-label {
+    border-radius: 2px;
+    margin: 8px 4px 0 0;
+    padding: 3px 8px;
+    display: inline-block;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, .08);
+    .color {
+        width: 8px;
+        display: inline-block;
+        height: 8px;
+        margin-right: 8px;
+        border-radius: 50%;
+    }
+}
